@@ -1,1 +1,10 @@
-sample.txt
+# Lists
+custom_shout/custom_shout.txt
+emotes/emotes.txt
+greetings/greetings.txt
+
+# VIPS
+vips/vips.txt
+
+# Twitch Actions
+twitch_actions/auto_shoutout.txt

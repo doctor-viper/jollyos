@@ -1,0 +1,34 @@
+OnSpeak *
+# ARE THEY A VIP
+Function "var data = [data]; var lowerName = data.user.toLowerCase(); return { lowerUsername: lowerName };"
+List Contains Vips "{lowerUsername}"
+Variable Set isLimeyVIP {contains}
+# ARE THEY A SUBSCRIBER?
+Function "var data = [data]; var subscriberStatus = data.flags.subscriber ? data.flags.subscriber : false; return { isSubscriber: subscriberStatus };"
+# ARE THEY A CHANNEL VIP?
+Function "var data = [data]; var vipStatus = data.flags.vip ? data.flags.vip : false; return { isVIP: vipStatus };"
+# ARE THEY A MOD?
+Function "var data = [data]; var modStatus = data.flags.mod ? data.flags.mod : false; return { isMod: modStatus };"
+Function "return { continue: ( ('{lowerUsername}' != 'limeyos') && ('{lowerUsername}' != 'unclelimey') && ('{lowerUsername}' != 'streamelements') ) && ( {isVIP} || {isSubscriber} || {isLimeyVIP} || {isMod} ) };"
+List Contains CustomShout "{lowerUsername}"
+If 8 {contains} = true
+  If 1 {lowerUsername} = "fantasynr1"
+    Play 100 nowait wut-is-happening.mp3
+  If 1 {lowerUsername} = "shoebaccasaurus"
+    Play 75 nowait shoebacca.mp3
+  If 1 {lowerUsername} = "joeyscary"
+    Play 75 nowait joey.mp3
+  If 1 {lowerUsername} = "dr_viper"
+    Play 60 nowait doctor.mp3
+If 1 {contains} != true
+  Play 100 nowait hello-there.mp3
+API GET https://decapi.me/twitch/game/{user}
+List Get Greetings
+Variable Set greeting {value}
+List Get Emotes
+Variable Set emote {value}
+If 1 {isMod} = true
+  Chat Send "unclel19BigLime MOD ALERT @{user} unclel19BigLime"
+Chat Send "Hey {greeting} {emote}. https://twitch.tv/{user}"
+If 1 {api_data} != ""
+  Chat Send "Last seen playing {api_data} unclel19BigLime"
