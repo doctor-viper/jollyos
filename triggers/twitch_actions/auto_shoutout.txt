@@ -9,7 +9,7 @@ Function "var data = [data]; var subscriberStatus = data.flags.subscriber ? data
 Function "var data = [data]; var vipStatus = data.flags.vip ? data.flags.vip : false; return { isVIP: vipStatus };"
 # ARE THEY A MOD?
 Function "var data = [data]; var modStatus = data.flags.mod ? data.flags.mod : false; return { isMod: modStatus };"
-Function "return { continue: ( ('{lowerUsername}' != 'limeyos') && ('{lowerUsername}' != 'unclelimey') && ('{lowerUsername}' != 'streamelements') ) && ( {isVIP} || {isSubscriber} || {isLimeyVIP} || {isMod} ) };"
+Function "return { continue: ( ('{lowerUsername}' != 'jollyos') && ('{lowerUsername}' != 'jollyjola') && ('{lowerUsername}' != 'streamelements') ) && ( {isVIP} || {isSubscriber} || {isLimeyVIP} || {isMod} ) };"
 List Contains CustomShout "{lowerUsername}"
 If 8 {contains} = true
   If 1 {lowerUsername} = "fantasynr1"
@@ -30,7 +30,7 @@ Variable Set greeting {value}
 List Get Emotes
 Variable Set emote {value}
 If 1 {isMod} = true
-  Chat Send "unclel19BigLime MOD ALERT @{user} unclel19BigLime"
+  Chat Send "jollyj14Link MOD ALERT @{user} jollyj14Link"
 Chat Send "Hey {greeting} {emote}. https://twitch.tv/{user}"
 If 1 {api_data} != ""
-  Chat Send "Last seen playing {api_data} unclel19BigLime"
+  Chat Send "Last seen playing {api_data} jollyj14Link"

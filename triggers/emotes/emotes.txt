@@ -1,8 +1,8 @@
 OnInit
-List Add Emotes "unclel19BigLime"
-List Add Emotes "unclel19LimeLeaf"
+List Add Emotes "jollyj14Shield"
+List Add Emotes "jollyj14Linkface"
 List Add Emotes "unclel19FreshLime"
-List Add Emotes "unclel19TheLounge"
-List Add Emotes "unclel19Vibes"
+List Add Emotes "jollyj14Majora"
+List Add Emotes "jollyj14Link"
 
 
