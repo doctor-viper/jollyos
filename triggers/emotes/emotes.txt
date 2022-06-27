@@ -1,7 +1,7 @@
 OnInit
 List Add Emotes "jollyj14Shield"
 List Add Emotes "jollyj14Linkface"
-List Add Emotes "unclel19FreshLime"
+List Add Emotes "jollyj14CoolLink"
 List Add Emotes "jollyj14Majora"
 List Add Emotes "jollyj14Link"
 
